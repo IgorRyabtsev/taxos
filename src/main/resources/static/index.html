@@ -1,0 +1,78 @@
+<html>
+<body>
+
+Import taxonomy:<br>
+<div>
+    <form method="POST" enctype="multipart/form-data" action="/rest/importTaxonomy">
+        <table>
+            <tr>
+                <td>File to upload:</td>
+                <td><input type="file" name="taxonomy"/></td>
+            </tr>
+            <tr>
+                <td>Taxonomy name:</td>
+                <td><input type="text" name="taxonomyName"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Upload"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+Import collection:<br>
+<div>
+    <form method="POST" enctype="multipart/form-data" action="/rest/importCollection">
+        <table>
+            <tr>
+                <td>File to upload:</td>
+                <td><input type="file" name="collection"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Upload"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+Get record from collection:<br>
+<div>
+    <form method="GET" action="/rest/getRecord">
+        <table>
+            <tr>
+                <td>Record id:</td>
+                <td><input type="text" name="id"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Get"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+Get list of taxonomies by prefix:<br>
+<div>
+    <form method="GET" action="/rest/suggestTaxonomy">
+        <table>
+            <tr>
+                <td>Taxonomy name:</td>
+                <td><input type="text" name="taxonomyName"/></td>
+            </tr>
+            <tr>
+                <td>Prefix:</td>
+                <td><input type="text" name="prefix"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Get"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
